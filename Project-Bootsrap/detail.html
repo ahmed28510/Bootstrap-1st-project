@@ -46,9 +46,63 @@
 
     </div>
 
-    <div class="container pt-3 ">
+    <div class="container pt-3  d-flex justify-content-between align-items-center ">
         <h4 class="text-center  bg-primary fw-bold p-3   w-25 rounded text-white border border-dark border-2">PROFILE
         </h4>
+
+<button class="btn btn-primary fw-bold p-2 fst-italic ps-3 pe-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Edit</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Edit Student</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    
+ <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Student Name</label>
+                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter your full name">
+                <div id="nameHelp" class="form-text text-dark">Your Name must be 8-20 characters long.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputtext1" class="form-label">Father Name</label>
+                <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" placeholder="Enter your father name">
+                <div id="textHelp" class="form-text text-dark">Please enter your father name</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputtext1" class="form-label">Batch Number</label>
+                <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" placeholder="Enter your batch number">
+                <div id="textHelp" class="form-text text-dark">Please enter your batch number</div>
+              </div>
+
+ <div class="mb-2">
+                <label for="exampleInputtext1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" placeholder="Enter your email">
+                <div id="textHelp" class="form-text text-dark">Please enter your email address</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="formFile" class="form-label text-white">Student Image</label>
+                <input class="form-control" type="file" id="formFile"> 
+              </div>
+
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+            </form>
+
+        <div class="mt-2 text-end">
+            <button type="submit" class="btn btn-primary">Save</button>
+
+        </div>
+  </div>
+</div>
+
     </div>
 
     <div class="container text-start">
