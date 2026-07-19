@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="./images/maimg.jpg" type="image/x-icon">
 </head>
 
-<body>
+<body class="bg-dark-subtle bg-gradient">
 
 
 
@@ -53,46 +53,72 @@
       <div class="col-6 d-flex justify-content-end align-items-center gap-3">
 
 
-        <a class="btn btn-primary  " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-          aria-controls="offcanvasExample">
-          Filter
-        </a>
+       <a class="btn btn-primary fw-bold fst-italic" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+  aria-controls="offcanvasExample">
+  Filter
+</a>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-          aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-header bg-black">
-            <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">FILTER STUDENTS</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body bg-dark bg-gradient text-white">
-            <div class="mb-4 mt-4">
-              <select class="form-select" aria-label="Default select example">
-                <label class="form-label mb-2">Batch</label>
-                <option selected>Choose your batch</option>
-                <option value="1">Batch 21</option>
-                <option value="2">Batch 22</option>
-                <option value="3">Batch 23</option>
-              </select>
-            </div>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header bg-black">
+    <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">FILTER STUDENTS</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
 
-            <div class="mb-4">
-              <label class="form-label mb-2 fw-bold d-block">Gender</label>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Male</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Female</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                <label class="form-check-label" for="inlineCheckbox3">Other</label>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="offcanvas-body bg-secondary bg-gradient text-white">
 
+    <div class="mb-4 mt-4">
+      <label class="form-label mb-2 bg-dark bg-gradient text-white">Batch #</label>
+      <select class="form-select" aria-label="Default select example">
+        <option disabled selected>Choose your batch</option>
+        <option value="1">Batch 21</option>
+        <option value="2">Batch 22</option>
+        <option value="3">Batch 23</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label mb-2 fw-bold d-block text-black">Gender</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genderRadio" id="genderMale" value="male">
+        <label class="form-check-label text-secondary-emphasis" for="genderMale">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genderRadio" id="genderFemale" value="female">
+        <label class="form-check-label text-secondary-emphasis" for="genderFemale">Female</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genderRadio" id="genderOther" value="other">
+        <label class="form-check-label text-secondary-emphasis" for="genderOther">Other</label>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="ageRange" class="form-label fw-bold d-block text-black">Age</label>
+      <input type="range" class="form-range" min="16" max="50" id="ageRange"
+        oninput="document.getElementById('ageRangeOutput').innerText = this.value">
+      <div class="text-center">
+        <span id="ageRangeOutput" class="fw-bold">16</span>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label mb-2 fw-bold d-block text-black">Fees</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="feesRadio" id="feesPaid" value="paid">
+        <label class="form-check-label text-secondary-emphasis" for="feesPaid">Paid</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="feesRadio" id="feesUnpaid" value="unpaid">
+        <label class="form-check-label text-secondary-emphasis" for="feesUnpaid">Unpaid</label>
+      </div>
+    </div>
+
+   <button type="button" class="btn btn-outline-light fw-bold" data-bs-dismiss="offcanvas">Apply</button>
+
+  </div>
+</div>
+        
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary pt-2 pb-2 ps-3 pe-3 me-4 fst-italic fw-bold" data-bs-toggle="modal"
           data-bs-target="#staticBackdrop">
@@ -104,11 +130,11 @@
           tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white">
-              <div class="modal-header bg-dark text-white">
+              <div class="modal-header bg-primary text-white bg-gradient">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Student</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body bg-dark text-white">
+              <div class="modal-body bg-dark text-white bg-gradient">
 
                 <form>
                   <div class="mb-3">
@@ -146,9 +172,9 @@
                 </form>
 
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer bg-primary bg-gradient text-white">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save Changes</button>
+                <button type="button" class="btn btn-light text-primary" data-bs-dismiss="modal">Save Changes</button>
               </div>
             </div>
           </div>
